@@ -1,5 +1,3 @@
-  # Air Quality & Population Analysis
-
 ## Contexte du projet
 Ce projet analyse la qualité de l'air en relation avec la population dans la région Île-de-France. Il s'appuie sur des données publiques, incluant des mesures environnementales (NO₂, O₃, PM10) et des données démographiques communales. Le traitement est réalisé en SQL et Python, avec une visualisation finale sur Power BI.
 
