@@ -19,8 +19,8 @@ import seaborn as sns
 
 # Importer le fichier sur la qualité de l'air en ile de france
 
-chemin_Qualite_Air = "C:/Users/diaby/OneDrive/Bureau/Data_Pipline/QualiteAir.csv" # Définir le chmin vers le fichier csv
-df = pd.read_csv(chemin_Qualite_Air, sep=";") # Lire le fichier
+chemin_Qualite_Air = "QualiteAir.csv" 
+df = pd.read_csv(chemin_Qualite_Air, sep=";") 
 df.sample(10) # Afficher 10 lignes aléatoires du DataFrame
 
 # Analyse exploratoire du DataFrame
@@ -106,7 +106,7 @@ df_moyenne_particule_fines_pm10_departement
 # Créer un fichier .env afin d'y stocker les informations de connexion de la base de données postgreSQL
 
 # Chemin complet vers ton fichier .env
-chemin_env_air = "C:/Users/diaby/OneDrive/Bureau/Data_Pipline/.env"
+chemin_env_air = ".env"
 charger_env(chemin_env_air=chemin_env_air)
 
 # Maintenant, récupèrer les variables
@@ -127,7 +127,7 @@ df.to_sql('pollution', engine, if_exists='replace', index=False)
 print("DataFrame chargé dans la table 'pollution_data' avec succès !")
 
 # Importer le fichier sur la population
-chemin_population = "C:/Users/diaby/OneDrive/Bureau/Data_Pipline/population.csv" 
+chemin_population = "population.csv" 
 df = pd.read_csv(chemin_population, sep=";", encoding="latin1") 
 df.sample(10)  # Afficher 10 lignes aléatoires du DataFrame
 
@@ -157,7 +157,7 @@ df.drop(['annee_population'], axis=1, inplace=True) # l'argument inplace permet 
 df
 
 # Chemin complet vers ton fichier .env
-chemin_env_air = "C:/Users/diaby/OneDrive/Bureau/Data_Pipline/.env"
+chemin_env_air = ".env"
 charger_env(chemin_env_air=chemin_env_air)
 
 # Maintenant, récupèrer les variables
