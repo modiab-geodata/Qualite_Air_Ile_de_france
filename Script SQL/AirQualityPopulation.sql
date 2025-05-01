@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS public.population_data_old AS SELECT * FROM public.po
 ALTER TABLE public.pollution_data ADD COLUMN annee INT, ADD COLUMN mois INT;
 UPDATE public.pollution_data SET annee = EXTRACT(YEAR FROM date::date), mois = EXTRACT(MONTH FROM date::date);
 
--- BIEN TYPER DONNEES LES TYPIE
+-- BIEN TYPER LES DONNEES 
 SELECT date,
        CAST(code_insee AS TEXT) AS code_insee,
        CAST(dioxyde_azote_no2 AS INT) AS dioxyde_azote_no2,
